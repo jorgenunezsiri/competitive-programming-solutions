@@ -6,15 +6,15 @@
 using namespace std;
 
 int binarySearch(int v[], int value, int tam) {
-	int low = 0;
-	int high = tam-1;
-	int mid = 0;
-	while(low <= high) {
-		mid = low + (high-low)/2;
-		if (v[mid] >= value) high = mid -1;
-		else low = mid + 1;
-	}
-	return low;
+    int low = 0;
+    int high = tam-1;
+    int mid = 0;
+    while(low <= high) {
+        mid = low + (high-low)/2;
+        if (v[mid] >= value) high = mid -1;
+        else low = mid + 1;
+    }
+    return low;
 }
 
 int n, q, numero;

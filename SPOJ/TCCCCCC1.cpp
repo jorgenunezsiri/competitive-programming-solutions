@@ -35,10 +35,10 @@ int main()
         AddMultiply[i].menor = (arr[0] + arr[1])*arr[2]; //(a+b)*c
         temporal = (arr[0] + arr[2])*arr[1]; //(a+c)*b
         if(temporal < AddMultiply[i].menor)
-          AddMultiply[i].menor = temporal;
+            AddMultiply[i].menor = temporal;
         temporal = (arr[1] + arr[2])*arr[0]; //(b+c)*a
         if(temporal < AddMultiply[i].menor)
-          AddMultiply[i].menor = temporal;
+            AddMultiply[i].menor = temporal;
         temporal = (arr[0] * arr[1])+arr[2]; //(a*b)+c
         if(temporal < AddMultiply[i].menor)
             AddMultiply[i].menor = temporal;
@@ -52,10 +52,10 @@ int main()
         AddMultiply[i].mayor = (arr[0] + arr[1])*arr[2]; //(a+b)*c
         temporal = (arr[0] + arr[2])*arr[1]; //(a+c)*b
         if(temporal > AddMultiply[i].mayor)
-           AddMultiply[i].mayor = temporal;
+            AddMultiply[i].mayor = temporal;
         temporal = (arr[1] + arr[2])*arr[0]; //(b+c)*a
         if(temporal > AddMultiply[i].mayor)
-           AddMultiply[i].mayor = temporal;
+            AddMultiply[i].mayor = temporal;
         temporal = (arr[0] * arr[1])+arr[2]; //(a*b)+c
         if(temporal > AddMultiply[i].mayor)
             AddMultiply[i].mayor = temporal;

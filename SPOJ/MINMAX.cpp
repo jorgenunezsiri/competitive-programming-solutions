@@ -11,15 +11,15 @@ int main(){
     ios_base::sync_with_stdio(0);
     int t, n;
     cin >> t;
-    for(int i = 0; i < t; i++){
+    for(int i = 0; i < t; i++) {
         cin >> n;
         vector<int> v;
-        for(int j = 0; j < n; j++){
+        for(int j = 0; j < n; j++) {
             int tmp; cin >> tmp;
             v.push_back(tmp);
         }
         int maxi = 0;
-        for(int j = 0; j < n; j++){
+        for(int j = 0; j < n; j++) {
             maxi = max(v[j], maxi);
         }
         printf("Group #%d: %d\n", i+1, maxi);

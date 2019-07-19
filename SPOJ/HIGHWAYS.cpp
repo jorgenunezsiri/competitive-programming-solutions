@@ -50,7 +50,6 @@ int dijkstra(int cities, int highways, int start, int end)
                 distancia[nodoAdyacente] = (peso + pesoAdyacente);
                 caminoMasCorto.push(pii(distancia[nodoAdyacente], nodoAdyacente));
             }
-
         }
         visited[nodo] = true;
         if(nodo == end) break;
@@ -69,6 +68,6 @@ int main()
         cin >> n >> m >> s >> e;
         d = dijkstra(n, m, s, e);
         if(d != CENTINELA) cout << d << "\n";
-        else  cout << "NONE" << "\n";
+        else cout << "NONE" << "\n";
     }
 }

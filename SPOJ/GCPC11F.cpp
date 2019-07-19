@@ -23,7 +23,7 @@ int main()
     {
         getline(cin, s);
         vector<pair<int,char> > v(26);
-        for(int i = 0; i < 26; i++) {v[i].first = 0;v[i].second = 'A'+i;}
+        for(int i = 0; i < 26; i++) { v[i].first = 0; v[i].second = 'A'+i; }
         for(int i = 0; i < s.size(); i++)
         {
             v[s[i] - 'A'].first++;
@@ -38,8 +38,8 @@ int main()
             {
                 if(s[i] == ' ') continue;
                 if((int)((int)s[i] - d) < 'A') {
-                        s[i] -= d;
-                        s[i] += 26;
+                    s[i] -= d;
+                    s[i] += 26;
                 }
                 else s[i] -= d;
             }

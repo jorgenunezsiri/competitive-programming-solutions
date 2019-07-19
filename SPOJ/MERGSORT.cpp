@@ -73,7 +73,7 @@ void mezcla(int a[], int izda, int medio, int drcha)
         temporal[z++] = a[y++];
     }
 
-    for(z = izda;z <= drcha; z++)
+    for(z = izda; z <= drcha; z++)
     {
         a[z] = temporal[z];
     }
