@@ -22,50 +22,50 @@ ll mergeSort(int arr[], ll array_size)
 
 ll _mergeSort(int arr[], int temp[], ll left, ll right)
 {
-  ll mid, inv_count = 0;
-  if (right > left)
-  {
-    mid = left+((right-left)/2);
+    ll mid, inv_count = 0;
+    if (right > left)
+    {
+        mid = left+((right-left)/2);
 
-    inv_count  = _mergeSort(arr, temp, left, mid);
-    inv_count += _mergeSort(arr, temp, mid+1, right);
+        inv_count  = _mergeSort(arr, temp, left, mid);
+        inv_count += _mergeSort(arr, temp, mid+1, right);
 
-    inv_count += merged(arr, temp, left, mid+1, right);
-  }
-  return inv_count;
+        inv_count += merged(arr, temp, left, mid+1, right);
+    }
+    return inv_count;
 }
 
 ll merged(int arr[], int temp[], int left, int mid, int right)
 {
-  int i, j, k;
-  ll inv_count = 0;
+    int i, j, k;
+    ll inv_count = 0;
 
-  i = left;
-  j = mid;
-  k = left;
-  while ((i <= mid - 1) && (j <= right))
-  {
-    if (arr[i] <= arr[j])
+    i = left;
+    j = mid;
+    k = left;
+    while ((i <= mid - 1) && (j <= right))
     {
-      temp[k++] = arr[i++];
+        if (arr[i] <= arr[j])
+        {
+            temp[k++] = arr[i++];
+        }
+        else
+        {
+            temp[k++] = arr[j++];
+            inv_count = inv_count + (mid - i);
+        }
     }
-    else
-    {
-      temp[k++] = arr[j++];
-      inv_count = inv_count + (mid - i);
-    }
-  }
 
-  while (i <= mid - 1)
-    temp[k++] = arr[i++];
+    while (i <= mid - 1)
+        temp[k++] = arr[i++];
 
-  while (j <= right)
-    temp[k++] = arr[j++];
+    while (j <= right)
+        temp[k++] = arr[j++];
 
-  for (i=left; i <= right; i++)
-    arr[i] = temp[i];
+    for (i=left; i <= right; i++)
+        arr[i] = temp[i];
 
-  return inv_count;
+    return inv_count;
 }
 
 

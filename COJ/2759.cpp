@@ -62,7 +62,7 @@ int main()
         for(int j = i+1; j < n; j++)
         {
             ll costo = pow((entrada[i].first-entrada[j].first), 2.0)+
-            pow((entrada[i].second-entrada[j].second), 2.0);
+                       pow((entrada[i].second-entrada[j].second), 2.0);
             if(costo >= c)
             {
                 arbol.push_back(mp(costo, mp(i, j)));

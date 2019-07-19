@@ -10,18 +10,18 @@ string cadena;
 
 int main()
 {
-	while(getline(cin, cadena))
-	{
-		int fir = cadena.find_first_of("#");
-		int last = cadena.find_last_of("#");
-		for(int i = 0; i < cadena.length(); i++)
-		{
-			if(i < fir || i > last)
-			{
-				cout << cadena[i];
-			}
-		}
-		cout << "\n";
-	}
-	return 0;
+    while(getline(cin, cadena))
+    {
+        int fir = cadena.find_first_of("#");
+        int last = cadena.find_last_of("#");
+        for(int i = 0; i < cadena.length(); i++)
+        {
+            if(i < fir || i > last)
+            {
+                cout << cadena[i];
+            }
+        }
+        cout << "\n";
+    }
+    return 0;
 }

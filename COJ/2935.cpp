@@ -12,20 +12,20 @@ double precalc[MAX];
 
 int main()
 {
-	// ln(n+1!) = ln(1) + ln(2) + ln(3) + ... ln(n) + ln(n+1)
-	// ln(1) = 0
-	double sum = 0;
-	for(int i = 2; i < MAX; i++)
-	{
-		sum += (double)(log((double)i));
-		precalc[i] = sum;
-	}
-	cin >> t;
-	while(t--)
-	{
-		cin >> n >> b;
-		cout << (ll)(ceil(precalc[n+1]/log((double)b))) << "\n";
-	}
+    // ln(n+1!) = ln(1) + ln(2) + ln(3) + ... ln(n) + ln(n+1)
+    // ln(1) = 0
+    double sum = 0;
+    for(int i = 2; i < MAX; i++)
+    {
+        sum += (double)(log((double)i));
+        precalc[i] = sum;
+    }
+    cin >> t;
+    while(t--)
+    {
+        cin >> n >> b;
+        cout << (ll)(ceil(precalc[n+1]/log((double)b))) << "\n";
+    }
 
-	return 0;
+    return 0;
 }

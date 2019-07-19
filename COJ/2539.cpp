@@ -49,7 +49,7 @@ int main() {
         vec.push_back(temp);
     }
     sum.push_back(vec[0]);
-    for(int i = 1;i<vec.size();i++)
+    for(int i = 1; i<vec.size(); i++)
         sum.push_back(sum[i-1]+vec[i]);
 
     int n2 = rec(0,vec.size()-1);

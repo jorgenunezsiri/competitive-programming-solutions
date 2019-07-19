@@ -36,15 +36,15 @@ inline bool palindromo(int num)
     int rev = 0, dig;
     while (num > 0)
     {
-         dig = num % 10;
-         rev = rev * 10 + dig;
-         num = num / 10;
+        dig = num % 10;
+        rev = rev * 10 + dig;
+        num = num / 10;
     }
     return n == rev;
 }
 void sieve()
 {
-	m[0] = true;
+    m[0] = true;
     m[1] = true;
     m[2] = false;
     int cont = 0;
@@ -72,12 +72,12 @@ void sieve()
 int t, k, z;
 int main()
 {
-	sieve();
+    sieve();
     scanf("%d", &t);
-	for(int i = 0; i < t; i++)
-	{
-		scanf("%d %d", &k, &z);
+    for(int i = 0; i < t; i++)
+    {
+        scanf("%d %d", &k, &z);
         printf("%d\n", (cant[z] - cant[k-1]));
-	}
-	return 0;
+    }
+    return 0;
 }

@@ -53,27 +53,27 @@ ll nChoosek(ll n, ll k )
 
 int main()
 {
-	ios_base::sync_with_stdio(false);
-	int n, t, m;
-	scanf("%d", &t);
-	while(t-- > 0)
-	{
-		scanf("%d %d", &n, &m);
-		UF uf(n+1);
-		for(int i = 0; i < m; i++)
-		{
-			int a, b;
-			scanf("%d %d", &a, &b);
-			uf.join(a, b);
-		}
-		ll cnt = 0;
-		set<ll> s;
-	    for(int i = 1; i <= n; i++)
-	    {
-	        s.insert(uf.find(i));
-	    }
-	    cnt = s.size();
-		printf("%lld\n", nChoosek(cnt, 2));
-	}
-	return 0;
+    ios_base::sync_with_stdio(false);
+    int n, t, m;
+    scanf("%d", &t);
+    while(t-- > 0)
+    {
+        scanf("%d %d", &n, &m);
+        UF uf(n+1);
+        for(int i = 0; i < m; i++)
+        {
+            int a, b;
+            scanf("%d %d", &a, &b);
+            uf.join(a, b);
+        }
+        ll cnt = 0;
+        set<ll> s;
+        for(int i = 1; i <= n; i++)
+        {
+            s.insert(uf.find(i));
+        }
+        cnt = s.size();
+        printf("%lld\n", nChoosek(cnt, 2));
+    }
+    return 0;
 }

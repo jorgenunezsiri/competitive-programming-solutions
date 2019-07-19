@@ -28,23 +28,23 @@ int n, k;
 ll t[10010];
 int main()
 {
-	for(int a = 1; a <= 10000; a++)
-	{
-		k = 0;
-		for(int b = 1; b <= a; b++)
-		{
-			if((a*b) > 10000) break;
-			for(int c = 0; c <= b; c++)
-			{
-				if((a*b)+(a*c)+(b*c) <= 10000) t[(a*b)+(a*c)+(b*c)]++;
-			}
-		}
-	}
-	while(true)
-	{
-		cin >> n;
-		if(n == (-1)) break;
-		cout << t[n] << "\n";
-	}
-	return 0;
+    for(int a = 1; a <= 10000; a++)
+    {
+        k = 0;
+        for(int b = 1; b <= a; b++)
+        {
+            if((a*b) > 10000) break;
+            for(int c = 0; c <= b; c++)
+            {
+                if((a*b)+(a*c)+(b*c) <= 10000) t[(a*b)+(a*c)+(b*c)]++;
+            }
+        }
+    }
+    while(true)
+    {
+        cin >> n;
+        if(n == (-1)) break;
+        cout << t[n] << "\n";
+    }
+    return 0;
 }

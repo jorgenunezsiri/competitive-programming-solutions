@@ -17,7 +17,7 @@ int main()
     {
         cin >> cadena;
         if(cadena[0] == '0') break;
-        for(int i = 0 ; i < strlen(cadena); i++)
+        for(int i = 0; i < strlen(cadena); i++)
         {
             num = Convertir_A_Entero(cadena[i]);
             sum += (num * factorial(strlen(cadena)-i));
@@ -27,7 +27,6 @@ int main()
     }
 
     return 0;
-
 }
 
 int factorial(int n)

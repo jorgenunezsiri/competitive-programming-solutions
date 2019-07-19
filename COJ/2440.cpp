@@ -45,7 +45,6 @@ int main()
             cout << "N" << "\n";
         }
         sePuede = false; pt = 0;
-
     }
     return 0;
 }

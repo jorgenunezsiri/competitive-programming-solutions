@@ -16,32 +16,32 @@ typedef long long ll;
 vector<ll> cuadrados;
 int main()
 {
-	int t,k;
-	for(ll i = 1; i <= N; i++)
-	{
-		ll temp = i*i;
-		cuadrados.push_back(temp);
-	}
-	cin >> t;
-	for(int i = 0; i < t; i++)
-	{
-		cin >> k;
-		ll valor = 0;
-		for(ll j = 2; j <= N; j+=2)
-		{
-			ll val1 = (j+k);
-			ll val2 = ((j/2)+k);
-			if(binary_search(cuadrados.begin(),cuadrados.end(),val1))
-			{
-				if(binary_search(cuadrados.begin(),cuadrados.end(),val2))
-				{
-					valor = j;
-					break;
-				}
-			}
-		}
-		cout << "Case " << i+1 << ": " << valor << "\n";
-	}
+    int t,k;
+    for(ll i = 1; i <= N; i++)
+    {
+        ll temp = i*i;
+        cuadrados.push_back(temp);
+    }
+    cin >> t;
+    for(int i = 0; i < t; i++)
+    {
+        cin >> k;
+        ll valor = 0;
+        for(ll j = 2; j <= N; j+=2)
+        {
+            ll val1 = (j+k);
+            ll val2 = ((j/2)+k);
+            if(binary_search(cuadrados.begin(),cuadrados.end(),val1))
+            {
+                if(binary_search(cuadrados.begin(),cuadrados.end(),val2))
+                {
+                    valor = j;
+                    break;
+                }
+            }
+        }
+        cout << "Case " << i+1 << ": " << valor << "\n";
+    }
 
-	return 0;
+    return 0;
 }

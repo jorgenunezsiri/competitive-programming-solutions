@@ -43,7 +43,7 @@ int main()
         }
 
         sort(res.begin(), res.end());
-        for(int i = 0; i < res.size(); i++){
+        for(int i = 0; i < res.size(); i++) {
             if(res[i] != p)
             {
                 cout << res[i];

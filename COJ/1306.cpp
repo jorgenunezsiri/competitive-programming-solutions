@@ -12,7 +12,7 @@ string num;
 int Convertir(string cadena)
 {
     int sum = 0;
-    for(int i = cadena.size() - 1, cont = 0; cont < 2 ; i--, cont++)
+    for(int i = cadena.size() - 1, cont = 0; cont < 2; i--, cont++)
     {
         sum += (cadena[i] - '0') * (pow((double)10, cont));
     }
